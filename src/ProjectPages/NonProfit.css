@@ -1,0 +1,15 @@
+.project{
+    text-align: center;
+    font-family: 'Yantramanav', sans-serif;
+    overflow: hidden;
+    background: #e74c3c;
+    color: #ffffff;
+    margin: auto;
+}
+#project-title{
+    margin: auto;
+    border: 1px solid black;
+    width: 60%; 
+
+}
+

@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "less": "^2.7.3",
     "mdi": "^2.0.46",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-onscroll": "^1.0.4",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "react-typist": "^2.0.4",
     "react-typist-loop": "0.0.3"
