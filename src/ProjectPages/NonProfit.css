@@ -1,15 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300');
+@import url('https://fonts.googleapis.com/css?family=Signika:300');
+
 .project{
     text-align: center;
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Signika', sans-serif;
     overflow: hidden;
     background: #e74c3c;
-    color: #ffffff;
+    color: #ebebeb;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 #project-title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    padding: 50px 0px 50px 0px;
     margin: auto;
-    border: 1px solid black;
+    color: white;
     width: 60%; 
 
 }
+
+.portfolio-image{
+    margin: auto;
+    width: 60%;
+       
+}
+
+.portfolio-image img{
+    height: auto;
+    width: 100%;
+}
+
+
+.project-body{
+ display: flex;
+ 
+ width: 60%;
+ margin: auto;
+}
+
+.about-project{
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    width: 75%;
+}
+p{
+    padding: 10px;
+}
+
+.right-column{
+    margin-top: 25px;
+    width: 30%;
+    height: auto;
+}
+
+.feature-wrapper{
+    
+}
+.feature-title{
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0000003b;
+}
+
+.tech-list{
+    background: #00000023;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 10%;
+}
+li{
+    margin: 10px 0px;
+}
+.url-wrapper{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+.url{
+    display: flex;
+    align-items: center;
+    background: #0000003b;
+    height: 30px;
+    width: 10%;
+    padding: 10px;
+}
+.ink{
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    background: #00000023;
+    height: 30px;
+    align-items: center;
+    width: 99vw
+
+}
+a:link{
+    color: white;
+
+}
+a:visited {color: rgb(255, 255, 255);}
 

@@ -10,7 +10,7 @@ import auth0 from './techIcons/auth0.png';
 import css from './techIcons/css.png';
 import express from './techIcons/express.png';
 import grunt from './techIcons/grunt.png';
-import git from './techIcons/git_logo.png';
+import jestIcon from './techIcons/jest.png';
 import html from './techIcons/HTML5_Logo_512.png';
 import js from './techIcons/learn-javascript.png';
 import photoshop from './techIcons/photoshop.png';
@@ -58,7 +58,7 @@ class LandingPage extends Component {
   }
   
   findPos(obj) {
-    var curtop = -155;
+    var curtop = -175;
     if (obj.offsetParent) {
       // eslint-disable-next-line
           do {
@@ -66,7 +66,7 @@ class LandingPage extends Component {
         } while (obj = obj.offsetParent);
     return [curtop];
     }
-}
+} 
 
 
   handleScroll() {
@@ -74,7 +74,7 @@ class LandingPage extends Component {
     var last_known_scroll_position = Math.round(window.scrollY);
     console.log(last_known_scroll_position)
 
-    if(last_known_scroll_position < 100  ){
+    if(last_known_scroll_position < 50  ){
     this.setState({
       headerShown: false,
       onFeatured: false,
@@ -87,12 +87,16 @@ class LandingPage extends Component {
 
       animate: true,
 
-      seenFeatured: false,
-      seenProjects: false,
-      seenAbout: false,
-      seenTech: false,
-      seenContact: false
+      
     })} 
+    if(last_known_scroll_position > 50){
+      this.setState({
+        headerShown: true,
+       
+  
+        
+      })
+    }
 
     if(last_known_scroll_position >= this.findPos(document.getElementById("skills")) && last_known_scroll_position < this.findPos(document.getElementById("projects")) ){
       this.setState({
@@ -123,7 +127,7 @@ class LandingPage extends Component {
       
       } 
 
-        if(last_known_scroll_position >= this.findPos(document.getElementById("about-me")) && last_known_scroll_position < this.findPos(document.getElementById("tech-known"))  ){
+        if(last_known_scroll_position >= this.findPos(document.getElementById("about-me"))-100 && last_known_scroll_position < this.findPos(document.getElementById("tech-known"))  ){
           this.setState({
             headerShown: true,
             onFeatured: false,
@@ -197,7 +201,7 @@ showFrontend(){
       <div className="App" >
       {/* ------------Header------------ */}
         <div className = {this.state.headerShown ? 'floating-header' : 'header'} id = "red-color">
-          <div className = 'icon-left'>Icon</div>
+          <div className = 'icon-left'></div>
           <div className = {this.state.onFeatured ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("skills")))}>Featured</div>
           <div className = {this.state.onProjects ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("projects")))}>Projects</div>
           <div className = {this.state.onAbout ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("about-me")))}>about me</div>
@@ -205,7 +209,7 @@ showFrontend(){
           <div className = {this.state.onContact ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("social")))}>Contact Me</div>
 
           <div className = "hidden" id = "red-color">
-            <div>Ham</div>
+            <div></div>
               <div className = {this.state.onFeatured ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("skills")))}>Focus</div>
               <div className = {this.state.onProjects ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("projects")))}>Projects</div>
               <div className = {this.state.onAbout ? 'purple': 'cursor'} onClick={() => window.scroll(0,this.findPos(document.getElementById("about-me")))}>about me</div>
@@ -290,19 +294,22 @@ showFrontend(){
                     </div>
                   </div>
                 </div>
-            </Link>
+              </Link>
             </div>
             <div className = "project-img" id = "fix">
-               <div className = "test">
+            <Link to = {'/portfolio/2'} style ={{textDecoration: 'none', color: "#ffff"}}>
+               <div className = "test slightly-bigger">
                   <div className = "test-title">
-                  Fix My Dumb PC
+                  date-generator
                     <div className = "test-desc">
-                      description of site
+                      find the perfect date
                     </div>
                   </div>
               </div>
+              </Link>
             </div>
             <div className = "project-img" id = "TBD">
+            
              <div className = "test">
                   <div className = "test-title">
                     To Be Determined
@@ -311,6 +318,7 @@ showFrontend(){
                     </div>
                   </div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -326,14 +334,12 @@ showFrontend(){
           <div className = "big-name" >About Me</div>
           <div className = "border" id = "red"></div>
           <div className = {this.state.seenAbout ? 'about-wrapper': 'invisible'}>
-            <div className = "about-image"><div className= "test" id = "about-image">
-            Likes: <div>
-              Adventuring
-            </div>
+            <div className = "about-image"><div className= "colorado" id = "about-image">
+            
             </div></div>
             <div className = "about-name">Alexander Tingey</div>
-            <div className = "about-job">Web Developer</div>
-            <div className = "about-desc">Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke.</div>
+            <div className = "about-job">a front End Developer from Colorado</div>
+            <div className = "about-desc">When I'm not making responsive Websites or solving problems you can find me on the side of a mountain rock climbing or mountain biking, or on the rapids trying not to flip.   </div>
           </div>
         </div>
 
@@ -367,8 +373,8 @@ showFrontend(){
               <div className = "text">Express.js</div>
             </div>
             <div className = "icon" id=  { this.state.showFront ? 'front' : "fade"}>
-            <img src={angular} alt=""/>
-            <div className = "text">Angular</div>
+            <img src={redux} alt=""/>
+            <div className = "text">Redux</div>
             </div>
             <div className = "icon" id=  { this.state.showBack ? 'front' : "fade"}>
               <img src={postgres} alt=""/>
@@ -403,8 +409,8 @@ showFrontend(){
               <div className = "text">Sass</div>
             </div>
             <div className = "icon" id=  { this.state.showBack ? 'front' : "fade"}>
-              <img src={git} alt=""/>
-              <div className = "text">Git</div>
+              <img src={jestIcon} alt=""/>
+              <div className = "text">Jest</div>
             </div>
             <div className = "icon" id=  { this.state.showFront ? 'front' : "fade"}>
               <img src={photoshop} alt=""/>
@@ -414,9 +420,9 @@ showFrontend(){
               <img src={grunt} alt=""/>
               <div className = "text">Grunt</div>
             </div>
-            <div className = "icon" id=  { this.state.showFront ? 'front' : "fade"}>
-            <img src={redux} alt=""/>
-            <div className = "text">Redux</div>
+            <div className = "icon" id=  { this.state.showFront ? 'front' : "fade"}> 
+              <img src={angular} alt=""/>
+              <div className = "text">Angular</div>
             </div>
           </div>
         </div>
@@ -430,25 +436,31 @@ showFrontend(){
       <div className = 'big-name' id = 'social'>Contact Me</div>
       
       <div className = "border" id = "red"></div>
-
-         <div className = "contact-wrapper">
-            <div className = "contact-box">
-              <div className = 'red-circle'><img src={linkedIn} alt=""/> </div>
-              <div></div>
-            </div>
-            <div className = 'red-circle'><img src={github} alt=""/> </div>
-            <div className = 'red-circle'><img src={Document} alt=""/> </div>
-          </div>
-          
+      
+        <form className = "email-wrapper"method="POST" action="http://formspree.io/alextingey1@gmail.com">
+          <input className = "email" type="email" name="email" placeholder="Your email" />
+          <textarea className = "body" name="message" placeholder="Your message"></textarea>
+          <button className = "button" type="submit">Send</button>
+        </form>
+    
           
       </div>
 
+     
 
-      <div  id = 'size' >
+      
           <div className = "flip-decor">
 
           </div>
-         
+          <div  className = "filler" id = "red-color" >
+         <div className = "contact-wrapper">
+            <div className = "contact-box">
+            <a href="https://www.linkedin.com/in/alexander-tingey/"><div className = 'links-circle'> <img src={linkedIn} alt=""/> </div></a>
+              <div></div>
+            </div>
+            <a href="https://github.com/tingey21"><div className = 'links-circle'><img src={github} alt=""/> </div></a>
+            <div className = 'links-circle'><img src={Document} alt=""/> </div>
+          </div>
         </div>  
        
       </div>

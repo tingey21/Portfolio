@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import './NonProfit.css'
 import placeholder from '../techIcons/img-5-1200x600.png'
-export default class NonProfit extends Component {
+export default class DateNight extends Component {
   render() {
     return (
       <div className = 'project'>
       
-          <div className = "big-name" id = 'project-title'><div>The Non Profit</div><div className = "bigarrow"></div> </div>
+          <div className = "big-name" id = 'project-title'>Date Idea Generator</div>
           <div className = "portfolio-image"><img src={placeholder} alt=""/></div>
           <div className = "project-body">
             <div className = "about-project"> <p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson’s life — and the connection to the poem — is covered in the book The If Man.</p>
@@ -18,10 +18,13 @@ export default class NonProfit extends Component {
                 <div className = "feature-title">Features</div>
                 <div className = "tech-list">
                   <li>React</li>
-                  <li>Node Mailer</li>
-                  <li>ath0</li>
-                  <li>responsive design</li>
-                  <li>stripe</li>
+                  <li>Redux</li>
+                  <li>Redux Promise MiddleWare</li>
+                  <li>Sass</li>
+                  <li>Responsive Design</li>
+                  <li>Node.js</li>
+                  <li>Jest</li>
+                  <li>express</li>
                 </div>
               </div>
               <div className = "url-wrapper">

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400');
-
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300');
+@import url('https://fonts.googleapis.com/css?family=Signika:300');
 .App {
   text-align: center;
   color: #444444;
-  font-family: 'Yantramanav', sans-serif;
+  font-family: 'Signika', sans-serif;
   overflow: hidden;
  
   
@@ -118,7 +118,7 @@
 }
 
 .big-name{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 4em;
   font-weight: 260;
   margin-bottom: 20px;
@@ -153,7 +153,7 @@
 }
 
 .skills-title{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 4em;
   font-weight: 20;
   padding-bottom: 10px;
@@ -235,7 +235,7 @@ animation: bounce 1s infinite;
 .skill-title{
   font-size: 700;
   font-size: 1.75rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -253,7 +253,7 @@ animation: bounce 1s infinite;
 
 .project-title{
   
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 4em;
   font-weight: 20;
   padding-bottom: 10px;
@@ -288,7 +288,7 @@ animation: bounce 1s infinite;
 }
 
 #tech-font{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 4em;
   font-weight: 20;
   padding-bottom: 10px;
@@ -399,15 +399,47 @@ animation: bounce 1s infinite;
   opacity: 0;
   transition: 1s ease-out;
 }
+
+.slightly-bigger{
+  height: 181px;
+  width: 276px;
+}
 .test:hover{
   transition: 1s ease;
 opacity: 1;
 }
 
+.colorado{
+  height: 178px;
+  width: 273px;
+  margin: auto;
+  margin-top: 17px;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 1s ease-out;
+
+  background-image: url('./pictures/1280px-Flag_of_Colorado.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff !important;
+}
+
+.colorado:hover{
+  transition: 1s ease;
+  opacity: .7;
+}
+
+
+
 .test-title{
   font-size: 700;
   font-size: 1.75rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 .test-desc{
   
@@ -472,7 +504,7 @@ opacity: 1;
   padding-top: 30px;
   font-size: 700;
   font-size: 1.25rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   color: #e74c3c
 
 }
@@ -482,7 +514,7 @@ opacity: 1;
 .about-job{
   font-size: 400;
   font-size: .8rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -491,6 +523,7 @@ opacity: 1;
   padding-top: 30px;
   width: 350px;
   font-weight: 300;
+  line-height: 19.5px;
 }
 
 .icon img{
@@ -509,7 +542,7 @@ opacity: 1;
 }
 
 .filler{
-  height: 200px;
+  height: 300px;
 }
 
 #size{
@@ -572,7 +605,53 @@ opacity: 1;
   
 }
 
+.email-wrapper{
+  display: grid;
+  width: 25%;
+  margin: auto;
 
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  grid-template-areas: 
+  "email"
+  "body"
+  "submit"
+}
+
+.email{
+  border-radius: 7px;
+  height: 100%;
+  grid-area: email;
+}
+.body{
+  border-radius: 7px;
+  height: 300px;
+  grid-area: body;
+}
+button:focus {outline:0;}
+.button{
+  height: 50px;
+  background-color:#e74c3c;
+  border-radius: 7px;
+  color: white;
+  
+  
+  grid-area: submit;
+}
+
+.links-circle{
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  background: #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 7px 24px 62px -22px rgba(0,0,0,0.24);
+  
+  
+}
 
 /*---------animations--------- */
 
@@ -600,7 +679,11 @@ opacity: 1;
   }
 }
 
-
+@media screen and (max-width: 1280px){
+  .email-wrapper{
+    width: 50%
+  }
+}
 
 @media screen and (max-width: 833px){
 
@@ -649,7 +732,7 @@ opacity: 1;
 .floating-header{
   display: none;
 }
-  
+ 
 }
 
 @media screen and (max-width: 500px){
@@ -673,6 +756,9 @@ opacity: 1;
   .text{
     font-size: 4vw;
     right: 1;
+  }
+  .email-wrapper{
+    width: 100%;
   }
 }
 
