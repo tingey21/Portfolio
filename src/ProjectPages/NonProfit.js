@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './NonProfit.css'
-import placeholder from '../pictures/screencapture-thenonprofit40-org-1514316471526.png'
+import placeholder from '../pictures/thenonprofit.jpg'
 import {Link} from 'react-router-dom'
 export default class NonProfit extends Component {
   render() {
