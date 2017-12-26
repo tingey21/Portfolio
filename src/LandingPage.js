@@ -24,6 +24,7 @@ import github from './svg/git.svg';
 import linkedIn from './svg/LinkedIn.svg'
 import Document from './svg/Document.svg'
 import {Link} from 'react-router-dom'
+import resume from './pictures/FinalResume.pdf'
 class LandingPage extends Component {
 
   constructor(props){
@@ -72,7 +73,7 @@ class LandingPage extends Component {
   handleScroll() {
     
     var last_known_scroll_position = Math.round(window.scrollY);
-    console.log(last_known_scroll_position)
+      console.log(last_known_scroll_position)
 
     if(last_known_scroll_position < 50  ){
     this.setState({
@@ -314,7 +315,7 @@ showFrontend(){
                   <div className = "test-title">
                     To Be Determined
                     <div className = "test-desc">
-                      description of site
+                      I'm always working on new projects
                     </div>
                   </div>
               </div>
@@ -459,7 +460,10 @@ showFrontend(){
               <div></div>
             </div>
             <a href="https://github.com/tingey21"><div className = 'links-circle'><img src={github} alt=""/> </div></a>
-            <div className = 'links-circle'><img src={Document} alt=""/> </div>
+            <div className = 'links-circle'>
+            <a href={resume} download="Resume.pdf">
+    
+<img src={Document} alt=""/></a></div>
           </div>
         </div>  
        

@@ -12,6 +12,9 @@
     flex-direction: column;
 }
 #project-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 100;
     padding: 50px 0px 50px 0px;
@@ -32,6 +35,26 @@
     width: 100%;
 }
 
+.big-arrow{
+    cursor: pointer;
+    margin-left: 70px;
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    
+    border-left: 15px solid rgb(255, 255, 255);
+  }
+  .left-big-arrow{
+      cursor: pointer;
+    margin-right: 70px;
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    
+    border-right: 15px solid rgb(255, 255, 255);
+  }
 
 .project-body{
  display: flex;
@@ -41,7 +64,7 @@
 }
 
 .about-project{
-    font-size: 1em;
+    font-size: 1.25em;
     text-align: left;
     line-height: 1.5em;
     width: 75%;

@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
 import './NonProfit.css'
-import placeholder from '../techIcons/img-5-1200x600.png'
+import placeholder from '../pictures/screencapture-dategen-io-1514318667706.png'
+import {Link} from 'react-router-dom'
 export default class DateNight extends Component {
   render() {
     return (
       <div className = 'project'>
       
-          <div className = "big-name" id = 'project-title'>Date Idea Generator</div>
+          <div className = "big-name" id = 'project-title'>
+          <Link to= {'/portfolio/1'}><div className = "left-big-arrow"></div></Link>
+            Date Idea Generator
+            </div>
           <div className = "portfolio-image"><img src={placeholder} alt=""/></div>
           <div className = "project-body">
-            <div className = "about-project"> <p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson’s life — and the connection to the poem — is covered in the book The If Man.</p>
-            <p>If you can keep your head when all about you are losing theirs and blaming it on you; If you can trust yourself when all men doubt you, but make allowance for their doubting too; if you can wait and not be tired by waiting,or being lied about, don’t deal in lies, or being hated, don’t give way to hating, and yet don’t look too good, nor talk too wise; if you can dream — and not make dreams your master; if you can think — and not make thoughts your aim; if you can meet with Triumph and Disaster and treat those two impostors just the same.</p>
-            <p>If you can bear to hear the truth you’ve spoken twisted by knaves to make a trap for fools, or watch the things you gave your life to broken, and stoop and build ’em up with wornout tools; if you can make one heap of all your winnings and risk it on one turn of pitch-and-toss, and lose, and start again at your beginnings and never breathe a word about your loss.</p>
+            <div className = "about-project"> <p>dategen.io was a group project that pulls from the yelp api and randomizes dates for you and your Significant other to go on. I was on a team of four and worked primarily on the functionality of the app.   </p>
+            <p>The site grabs based off the location you type in and front loads it while the animation runs. then you have over 100+ locations based off how big the city is for each category. You can also filter out certain parameters such as: Don't make me run, stone cold sober, and I'm on a budget.</p>
+            <p>
+              Once you finalize a date it creates a unique ID using base 64 which gives or 48 billion unique ID possibilities. With that ID you can send it to your significant other and they can edit the date and save it. after that all you do is have to refresh the page and the new dates will be there.
+            </p>
+            <p>
+              Also once you hit save date you have the ability to hit google maps and it exports to your phone so you have instant directions to your date.
+            </p>
+            
             </div>
             <div className = "right-column">
               <div className = "feature-wrapper">
@@ -29,7 +39,11 @@ export default class DateNight extends Component {
               </div>
               <div className = "url-wrapper">
                 <div className = "url">URL</div>
-                <a href="http://TheNonProfit40.org" target = "_blank" rel="noopener noreferrer"><div className = "ink"> TheNonProfit40.org </div></a>
+                <a href="http://dategen.io" target = "_blank" rel="noopener noreferrer"><div className = "ink"> dategen.io </div></a>
+              </div>
+              <div className = "url-wrapper">
+                <div className = "url"></div>
+                <a href="https://youtu.be/qc7i7mbYMOs" target = "_blank" rel="noopener noreferrer"><div className = "ink"> Video Walkthrough </div></a>
               </div>
             </div>
           </div>

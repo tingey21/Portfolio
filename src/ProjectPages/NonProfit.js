@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
 import './NonProfit.css'
-import placeholder from '../techIcons/img-5-1200x600.png'
+import placeholder from '../pictures/screencapture-thenonprofit40-org-1514316471526.png'
+import {Link} from 'react-router-dom'
 export default class NonProfit extends Component {
   render() {
     return (
       <div className = 'project'>
-      
-          <div className = "big-name" id = 'project-title'><div>The Non Profit</div><div className = "bigarrow"></div> </div>
+            <div className = "big-name" id = 'project-title'> 
+          <Link to= {'/'}> <div className = "left-big-arrow"></div></Link>
+          The Non Profit
+            <Link to= {'/portfolio/2'}> <div className = "big-arrow"></div></Link>
+           </div>
           <div className = "portfolio-image"><img src={placeholder} alt=""/></div>
           <div className = "project-body">
-            <div className = "about-project"> <p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson’s life — and the connection to the poem — is covered in the book The If Man.</p>
-            <p>If you can keep your head when all about you are losing theirs and blaming it on you; If you can trust yourself when all men doubt you, but make allowance for their doubting too; if you can wait and not be tired by waiting,or being lied about, don’t deal in lies, or being hated, don’t give way to hating, and yet don’t look too good, nor talk too wise; if you can dream — and not make dreams your master; if you can think — and not make thoughts your aim; if you can meet with Triumph and Disaster and treat those two impostors just the same.</p>
-            <p>If you can bear to hear the truth you’ve spoken twisted by knaves to make a trap for fools, or watch the things you gave your life to broken, and stoop and build ’em up with wornout tools; if you can make one heap of all your winnings and risk it on one turn of pitch-and-toss, and lose, and start again at your beginnings and never breathe a word about your loss.</p>
+            <div className = "about-project"> <p>The Non Profit was a personal project I completed at DevMountain which one most technical. The client side features the ability to donate, read a blog post and view the get involved cards. they also have the ability to sign up for the newsletter. It has route verification so if the user is not signed in they cant access the admin routes. 
+              </p> <p>The admin can update blog posts and get involved cards as well as send out a mass newsletter to everyone who has signed up. when the user types in an active email they recieve a thank you email instantly for signing up. On the admin side it uses Auth0 to handle the authentication of admin routes.  </p>
+            
             </div>
             <div className = "right-column">
               <div className = "feature-wrapper">
