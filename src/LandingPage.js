@@ -24,7 +24,7 @@ import github from './svg/git.svg';
 import linkedIn from './svg/LinkedIn.svg'
 import Document from './svg/Document.svg'
 import {Link} from 'react-router-dom'
-import resume from './pictures/FinalResume.pdf'
+import resume from './pictures/resume.pdf'
 class LandingPage extends Component {
 
   constructor(props){
