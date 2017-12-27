@@ -12,7 +12,6 @@ export default class DateNight extends Component {
             Date Idea Generator
             </div>
           <div className = "portfolio-image"><img src={placeholder} alt=""/></div>
-          <div className = "project-body">
             <div className = "about-project"> <p>dategen.io was a group project that pulls from the yelp api and randomizes dates for you and your Significant other to go on. I was on a team of four and worked primarily on the functionality of the app.   </p>
             <p>The site grabs based off the location you type in and front loads it while the animation runs. then you have over 100+ locations based off how big the city is for each category. You can also filter out certain parameters such as: Don't make me run, stone cold sober, and I'm on a budget.</p>
             <p>
@@ -23,7 +22,6 @@ export default class DateNight extends Component {
             </p>
             
             </div>
-            <div className = "right-column">
               <div className = "feature-wrapper">
                 <div className = "feature-title">Features</div>
                 <div className = "tech-list">
@@ -41,13 +39,11 @@ export default class DateNight extends Component {
                 <div className = "url">URL</div>
                 <a href="http://dategen.io" target = "_blank" rel="noopener noreferrer"><div className = "ink"> dategen.io </div></a>
               </div>
-              <div className = "url-wrapper">
+              <div className = "video-wrapper">
                 <div className = "url"></div>
                 <a href="https://youtu.be/qc7i7mbYMOs" target = "_blank" rel="noopener noreferrer"><div className = "ink"> Video Walkthrough </div></a>
               </div>
-            </div>
           </div>
-      </div>
     )
   }
 }

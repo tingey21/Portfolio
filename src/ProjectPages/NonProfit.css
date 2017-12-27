@@ -7,9 +7,20 @@
     overflow: hidden;
     background: #e74c3c;
     color: #ebebeb;
-    margin: auto;
-    display: flex;
+    
     flex-direction: column;
+    display: grid;
+    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-areas: 
+    "... title title ..."
+    "... image image..."
+    "...test feature..."
+    "...test url ..."
+    "...test  video ..."
+    
+    
+
+    
 }
 #project-title{
     display: flex;
@@ -20,13 +31,13 @@
     padding: 50px 0px 50px 0px;
     margin: auto;
     color: white;
-    width: 60%; 
+    grid-area: title;
 
 }
 
 .portfolio-image{
     margin: auto;
-    width: 60%;
+    grid-area: image;
        
 }
 
@@ -56,31 +67,23 @@
     border-right: 15px solid rgb(255, 255, 255);
   }
 
-.project-body{
- display: flex;
- 
- width: 60%;
- margin: auto;
-}
+
 
 .about-project{
     font-size: 1.25em;
     text-align: left;
     line-height: 1.5em;
-    width: 75%;
+    grid-area: test;
 }
 p{
     padding: 10px;
 }
 
-.right-column{
-    margin-top: 25px;
-    width: 30%;
-    height: auto;
-}
 
 .feature-wrapper{
-    
+    width: 100%;
+    grid-area: feature;
+
 }
 .feature-title{
     height: 2em;
@@ -88,6 +91,7 @@ p{
     justify-content: center;
     align-items: center;
     background: #0000003b;
+
 }
 
 .tech-list{
@@ -96,16 +100,20 @@ p{
     flex-direction: column;
     align-items: left;
     padding-left: 10%;
+
 }
 li{
     margin: 10px 0px;
 }
 .url-wrapper{
+    display: flex;
+    align-items: baseline; 
     margin-top: 30px;
     display: flex;
     align-items: center;
     width: 100%;
     overflow: hidden;
+    grid-area: url
 }
 .url{
     display: flex;
@@ -129,5 +137,54 @@ a:link{
     color: white;
 
 }
+.video-wrapper{
+    display: flex;
+    align-items: baseline; 
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    grid-area: video;
+}
+
 a:visited {color: rgb(255, 255, 255);}
 
+@media screen and (max-width: 750px) {
+    .project{
+        grid-template-columns: 20% 60% 20%;
+    grid-template-areas: 
+    "... title..."
+    "... url ..."
+    "... image ..."
+    "... video ..."
+    "...test  ..."
+    "...test  ..."
+    "...feature ... "
+    }
+    #project-title{
+        font-size: 2.5em
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .project{
+        grid-template-columns: 100%;
+    grid-template-areas: 
+    " title"
+    " url "
+    " image "
+    " video "
+    "test  "
+    "test  "
+    "feature  "
+    }
+    #project-title{
+        font-size: 2.5em
+    }
+    .left-big-arrow{
+        margin-right: 2px;
+    }
+
+}
