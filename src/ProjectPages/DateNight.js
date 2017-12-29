@@ -39,10 +39,8 @@ export default class DateNight extends Component {
                 <div className = "url">URL</div>
                 <a href="http://dategen.io" target = "_blank" rel="noopener noreferrer"><div className = "ink"> dategen.io </div></a>
               </div>
-              <div className = "video-wrapper">
-                <div className = "url"></div>
-                <a href="https://youtu.be/qc7i7mbYMOs" target = "_blank" rel="noopener noreferrer"><div className = "ink"> Video Walkthrough </div></a>
-              </div>
+              
+              
           </div>
     )
   }

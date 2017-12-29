@@ -73,7 +73,7 @@ class LandingPage extends Component {
   handleScroll() {
     
     var last_known_scroll_position = Math.round(window.scrollY);
-      console.log(last_known_scroll_position)
+      
 
     if(last_known_scroll_position < 50  ){
     this.setState({
@@ -170,7 +170,7 @@ class LandingPage extends Component {
     
     
       
-      console.log(this.state.headerShown)
+      
     
   }
 
