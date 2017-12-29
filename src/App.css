@@ -177,26 +177,49 @@
   opacity: 0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 #animation1{
-  
-  transition: opacity 1s ease;
   opacity: 1;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+  animation-duration: 2s;
 }
 
 #animation2{
-  transition: opacity 2s ease;
+  
   opacity: 1;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+  animation-delay: .5s;
+  animation-duration: 2s;
 }
 
 #animation3{
-  transition: opacity 3s ease;
+ 
   opacity: 1;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
 }
 
 #animation4{
-  transition: opacity 4s ease;
+ 
   opacity: 1;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
 }
 
 @keyframes fadeIn {

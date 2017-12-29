@@ -74,7 +74,9 @@ class LandingPage extends Component {
     
     var last_known_scroll_position = Math.round(window.scrollY);
       
-
+    if(last_known_scroll_position == undefined){
+      
+    }
     if(last_known_scroll_position < 50  ){
     this.setState({
       headerShown: false,
@@ -93,9 +95,7 @@ class LandingPage extends Component {
     if(last_known_scroll_position > 50){
       this.setState({
         headerShown: true,
-       
-  
-        
+     
       })
     }
 
@@ -246,26 +246,26 @@ showFrontend(){
           
         </div>
         <div className = "skills-wrapper">
-          <div className = 'skill-box' id = {this.state.animate ? 'animation1' : ''}>
+          <div className = 'skill-box' id = { 'animation1'}>
             <div className = 'red-circle'><img src={speed} alt=""/> </div>
             <h1 className = "skill-title">Fast</h1>
             <p className = "skill-desc">Fast load times and lag free interaction, my highest priority.</p>
           </div>
           
           
-          <div className = 'skill-box' id = {this.state.animate ? 'animation2' : ''}>
+          <div className = 'skill-box' id = {'animation2'}>
             <div className = 'red-circle'> <img src={responsive} alt=""/></div>
             <div className = "skill-title">Responsive</div>
             <div className = "skill-desc">My layouts will work on any device, big or small.</div>
           </div>
 
-          <div className = 'skill-box' id = {this.state.animate ? 'animation3' : ''} >
+          <div className = 'skill-box' id = {'animation3'} >
             <div className = 'red-circle'><img src={lightbulb} alt=""/> </div>
             <div className = "skill-title">Intuitive</div>
             <div className = "skill-desc">Strong preference for easy to use, intuitive UX/UI.</div>
           </div>
 
-          <div className = 'skill-box'  id = {this.state.animate ? 'animation4' : ''}>
+          <div className = 'skill-box'  id = {'animation4'}>
             <div className = 'red-circle'><img src={rocket} alt=""/></div>
             <div className = "skill-title">Dynamic</div>
             <div className = "skill-desc">Websites don't have to be static, I love making pages come to life.
